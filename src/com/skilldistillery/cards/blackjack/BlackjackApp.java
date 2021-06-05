@@ -92,6 +92,22 @@ public class BlackjackApp {
 
 		// Player turn:
 		while (true) {
+			//Check if player dealt blackjack
+			if(playerHand.isBust()) {
+				System.out.println(player.getName()+ " has been dealt black jack!");
+				System.out.println(player.getName()+ " Wins!!!");
+				continueGame = false;
+				break;
+			}
+			//Check if dealer dealt black jack
+			if(dealerHand.isBust()) {
+				System.out.println("Dealer has been dealt black jack!");
+				System.out.println("Dealer Wins!!!");
+				continueGame = false;
+				break;
+				}
+			
+			
 			playerMenu();
 
 			System.out.println(player.getName() + "'s turn to make a move.");
